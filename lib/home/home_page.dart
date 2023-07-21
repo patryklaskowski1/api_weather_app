@@ -10,17 +10,36 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Padding(
-          padding: EdgeInsets.all(70.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              TextFieldSearchCity(),
-            ],
-          ),
-        )
-      ),
+          child: Padding(
+        padding: EdgeInsets.all(70.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            TextFieldSearchCity(),
+            SizedBox(
+              height: 12,
+            ),
+            ElevatedButton(
+              onPressed: null,
+              child: Text('Check'),
+            ),
+            SizedBox(height: 22),
+            Text(
+              'City',
+              style: TextStyle(
+                fontSize: 24,
+              ),
+            ),
+            SizedBox(height: 12),
+            Text(
+              '18℃',
+              style: TextStyle(
+                fontSize: 72,
+              ),
+            ),
+          ],
+        ),
+      )),
     );
   }
 }
-
