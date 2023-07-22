@@ -14,23 +14,25 @@ class SearchWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(20.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 50),
-            child: TextFieldSearchCity(),
-          ),
-          const SizedBox(width: 50),
-          ElevatedButton(
-            onPressed: () {
-              context
-                  .read<HomePageCubit>()
-                  .getWeatherModel(city: _controller.text);
-            },
-            child: const Text('Check'),
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(top: 50),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            TextFieldSearchCity(),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                context
+                    .read<HomePageCubit>()
+                    .getWeatherModel(city: _controller.text);
+              },
+              child: const Text('Check'),
+            ),
+          ],
+        ),
       ),
     );
   }
