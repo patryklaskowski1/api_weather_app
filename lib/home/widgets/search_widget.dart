@@ -1,4 +1,4 @@
-import 'package:api_weather_app/home/aspect/text_field_search_city.dart';
+import 'package:api_weather_app/home/widgets/text_field_search_city.dart';
 import 'package:api_weather_app/home/cubit/home_page_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
