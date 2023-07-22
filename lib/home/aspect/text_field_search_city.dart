@@ -2,13 +2,14 @@
 import 'package:flutter/material.dart';
 
 class TextFieldSearchCity extends StatelessWidget {
-  const TextFieldSearchCity({
+   TextFieldSearchCity({
     super.key,
   });
-
+final _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: _controller,
       decoration: InputDecoration(
         hintText: 'City',
         label: const Text(

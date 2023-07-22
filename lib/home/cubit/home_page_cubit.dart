@@ -10,7 +10,7 @@ class HomePageCubit extends Cubit<HomePageState> {
 
   final WeatherRepository _weatherRepository;
 
-  Future<void> getWetherModel({
+  Future<void> getWeatherModel({
     required String city,
   }) async {
     emit(const HomePageState(status: Status.loading));
