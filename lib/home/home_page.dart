@@ -1,4 +1,5 @@
 import 'package:api_weather_app/core/enum.dart';
+import 'package:api_weather_app/data/remote_data_sources/weather_remote_data_source.dart';
 import 'package:api_weather_app/domain/repositories/repositories_weather.dart';
 import 'package:api_weather_app/home/widgets/display_weather_widget.dart';
 import 'package:api_weather_app/home/widgets/search_widget.dart';
@@ -15,7 +16,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => HomePageCubit(
-        WeatherRepository(),
+        WeatherRepository(WeatherRemoteDataSource()),
       ),
       child: BlocListener<HomePageCubit, HomePageState>(
         listener: (context, state) {
