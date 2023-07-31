@@ -34,6 +34,7 @@ class HomePage extends StatelessWidget {
           builder: (context, state) {
             final weatherModel = state.model;
             return Scaffold(
+              backgroundColor: Colors.blue,
               body: Center(
                 child: Builder(builder: (context) {
                   if (state.status == Status.loading) {

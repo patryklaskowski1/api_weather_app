@@ -26,19 +26,25 @@ class SearchWidget extends StatelessWidget {
                   'Enter the city ',
                   style: TextStyle(
                     fontSize: 22,
-                    color: Color.fromARGB(255, 184, 181, 181),
+                    color: Colors.white,
                   ),
                 ),
                 prefixIcon: const Icon(Icons.search),
                 hintStyle: const TextStyle(
-                  color: Color.fromARGB(255, 184, 181, 181),
+                  color: Colors.white,
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 5, color: Colors.grey),
+                  borderSide: const BorderSide(
+                    width: 5,
+                    color: Colors.white,
+                  ),
                   borderRadius: BorderRadius.circular(50.0),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 5, color: Colors.grey),
+                  borderSide: const BorderSide(
+                    width: 5,
+                    color: Colors.white,
+                  ),
                   borderRadius: BorderRadius.circular(50.0),
                 ),
               ),

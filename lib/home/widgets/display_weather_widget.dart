@@ -25,12 +25,14 @@ class DisplayWeatherWidget extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
               Text(
                 weatherModel.country,
                 style: const TextStyle(
                   fontSize: 18,
+                  color: Colors.white,
                 ),
               ),
               Container(
@@ -54,6 +56,7 @@ class DisplayWeatherWidget extends StatelessWidget {
                 '(${weatherModel.temperature.toString()} °F)',
                 style: const TextStyle(
                   fontSize: 22,
+                  color: Colors.white,
                 ),
               ),
               const SizedBox(height: 20),
@@ -62,6 +65,7 @@ class DisplayWeatherWidget extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
               const SizedBox(height: 10),
@@ -72,12 +76,14 @@ class DisplayWeatherWidget extends StatelessWidget {
                     'Local time :',
                     style: TextStyle(
                       fontSize: 18,
+                      color: Colors.white,
                     ),
                   ),
                   Text(
                     weatherModel.localTime,
                     style: const TextStyle(
                       fontSize: 18,
+                      color: Colors.white,
                     ),
                   ),
                 ],
@@ -91,6 +97,7 @@ class DisplayWeatherWidget extends StatelessWidget {
                       'Wind :',
                       style: TextStyle(
                         fontSize: 18,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -98,6 +105,7 @@ class DisplayWeatherWidget extends StatelessWidget {
                     '${weatherModel.wind.toString()} mph',
                     style: const TextStyle(
                       fontSize: 18,
+                      color: Colors.white,
                     ),
                   ),
                 ],
@@ -109,12 +117,14 @@ class DisplayWeatherWidget extends StatelessWidget {
                     'Cloud :',
                     style: TextStyle(
                       fontSize: 18,
+                      color: Colors.white,
                     ),
                   ),
                   Text(
                     '${weatherModel.cloud.toString()} %',
                     style: const TextStyle(
                       fontSize: 18,
+                      color: Colors.white,
                     ),
                   ),
                 ],
@@ -126,12 +136,14 @@ class DisplayWeatherWidget extends StatelessWidget {
                     'Humidity :',
                     style: TextStyle(
                       fontSize: 18,
+                      color: Colors.white,
                     ),
                   ),
                   Text(
                     '${weatherModel.humidity} %',
                     style: const TextStyle(
                       fontSize: 18,
+                      color: Colors.white,
                     ),
                   ),
                 ],
