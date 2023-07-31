@@ -44,22 +44,27 @@ class DisplayWeatherWidget extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                child: Text(
-                  '${weatherModel.temperature.toString()} ℃',
-                  style: const TextStyle(
-                    fontSize: 80,
-                    fontWeight: FontWeight.bold,
-                  ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 40),
+                      child: Text(
+                        '${weatherModel.tempC.toString()} ℃',
+                        style: const TextStyle(
+                          fontSize: 80,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      '(${weatherModel.tempF.toString()} °F)',
+                      style: const TextStyle(
+                        fontSize: 24,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              Text(
-                '(${weatherModel.temperature.toString()} °F)',
-                style: const TextStyle(
-                  fontSize: 22,
-                  color: Colors.white,
-                ),
-              ),
-              const SizedBox(height: 20),
               Text(
                 weatherModel.condition,
                 style: const TextStyle(

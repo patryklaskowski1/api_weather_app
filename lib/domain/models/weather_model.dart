@@ -1,6 +1,7 @@
 class WeatherModel {
   const WeatherModel({
-    required this.temperature,
+    required this.tempC,
+    required this.tempF,
     required this.wind,
     required this.cloud,
     required this.humidity,
@@ -11,7 +12,8 @@ class WeatherModel {
     required this.icon,
   });
 
-  final double temperature;
+  final double tempC;
+  final double tempF;
   final double wind;
   final int cloud;
   final int humidity;
@@ -22,7 +24,8 @@ class WeatherModel {
   final String icon;
 
   WeatherModel.fromJson(Map<String, dynamic> json)
-      : temperature = json['current']['temp_c'] + 0.0,
+      : tempC = json['current']['temp_c'] + 0.0,
+        tempF = json['current']['temp_f'] + 0.0,
         wind = json['current']['wind_mph'] + 0.0,
         cloud = json['current']['cloud'],
         humidity = json['current']['humidity'],
