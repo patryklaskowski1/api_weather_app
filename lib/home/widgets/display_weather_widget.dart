@@ -36,7 +36,7 @@ class DisplayWeatherWidget extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 200,
+                height: 250,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image:
