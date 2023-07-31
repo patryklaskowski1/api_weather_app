@@ -23,15 +23,104 @@ class DisplayWeatherWidget extends StatelessWidget {
               Text(
                 weatherModel.city,
                 style: const TextStyle(
-                  fontSize: 26,
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(height: 12),
+              const Text(
+                'Hiszpania',
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
               Text(
                 '${weatherModel.temperature.toString()} ℃',
                 style: const TextStyle(
                   fontSize: 76,
+                  fontWeight: FontWeight.bold,
                 ),
+              ),
+              Text(
+                '(${weatherModel.temperature.toString()} °F)',
+                style: const TextStyle(
+                  fontSize: 22,
+                ),
+              ),
+              const SizedBox(height: 18),
+              const Text(
+                'Partly cloudy',
+                style: TextStyle(
+                  fontSize: 22,
+                ),
+              ),
+              const SizedBox(height: 20),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Local time :',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  Text(
+                    '2023-07-31 9:59',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Wind :',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  Text(
+                    '11.2 mph',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Cloud :',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  Text(
+                    '29 %',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Humidity :',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  Text(
+                    '29 %',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
