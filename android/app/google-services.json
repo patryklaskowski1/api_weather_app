@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "518265866892",
+    "project_id": "api-weather-app-v2",
+    "storage_bucket": "api-weather-app-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518265866892:android:7a5ce9595221dc10c249a9",
+        "android_client_info": {
+          "package_name": "com.patryklaskowski.api_weather_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518265866892-09o3rvck19lm6hti0o4udunkfhv1s4ti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1lV0TEi3uiNpQ7RjxZO7ggbNnaRz5sg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518265866892-09o3rvck19lm6hti0o4udunkfhv1s4ti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
