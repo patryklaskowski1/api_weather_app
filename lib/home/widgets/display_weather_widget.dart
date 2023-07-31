@@ -16,7 +16,7 @@ class DisplayWeatherWidget extends StatelessWidget {
     return BlocBuilder<HomePageCubit, HomePageState>(
       builder: (context, state) {
         return Padding(
-          padding: const EdgeInsets.only(top: 30),
+          padding: const EdgeInsets.only(top: 10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -27,17 +27,27 @@ class DisplayWeatherWidget extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Text(
-                'Hiszpania',
-                style: TextStyle(
+              Text(
+                weatherModel.country,
+                style: const TextStyle(
                   fontSize: 18,
                 ),
               ),
-              Text(
-                '${weatherModel.temperature.toString()} ℃',
-                style: const TextStyle(
-                  fontSize: 76,
-                  fontWeight: FontWeight.bold,
+              Container(
+                height: 200,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image:
+                        NetworkImage("https:${weatherModel.icon.toString()}"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Text(
+                  '${weatherModel.temperature.toString()} ℃',
+                  style: const TextStyle(
+                    fontSize: 80,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               Text(
@@ -46,77 +56,81 @@ class DisplayWeatherWidget extends StatelessWidget {
                   fontSize: 22,
                 ),
               ),
-              const SizedBox(height: 18),
-              const Text(
-                'Partly cloudy',
-                style: TextStyle(
+              const SizedBox(height: 20),
+              Text(
+                weatherModel.condition,
+                style: const TextStyle(
                   fontSize: 22,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(height: 20),
-              const Row(
+              const SizedBox(height: 10),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text(
+                  const Text(
                     'Local time :',
                     style: TextStyle(
                       fontSize: 18,
                     ),
                   ),
                   Text(
-                    '2023-07-31 9:59',
-                    style: TextStyle(
+                    weatherModel.localTime,
+                    style: const TextStyle(
                       fontSize: 18,
                     ),
                   ),
                 ],
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text(
-                    'Wind :',
-                    style: TextStyle(
-                      fontSize: 18,
+                  const Padding(
+                    padding: EdgeInsets.only(left: 5),
+                    child: Text(
+                      'Wind :',
+                      style: TextStyle(
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                   Text(
-                    '11.2 mph',
-                    style: TextStyle(
+                    '${weatherModel.wind.toString()} mph',
+                    style: const TextStyle(
                       fontSize: 18,
                     ),
                   ),
                 ],
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text(
+                  const Text(
                     'Cloud :',
                     style: TextStyle(
                       fontSize: 18,
                     ),
                   ),
                   Text(
-                    '29 %',
-                    style: TextStyle(
+                    '${weatherModel.cloud.toString()} %',
+                    style: const TextStyle(
                       fontSize: 18,
                     ),
                   ),
                 ],
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text(
+                  const Text(
                     'Humidity :',
                     style: TextStyle(
                       fontSize: 18,
                     ),
                   ),
                   Text(
-                    '29 %',
-                    style: TextStyle(
+                    '${weatherModel.humidity} %',
+                    style: const TextStyle(
                       fontSize: 18,
                     ),
                   ),
