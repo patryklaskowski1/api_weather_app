@@ -1,4 +1,3 @@
-import 'package:api_weather_app/home/widgets/text_field_search_city.dart';
 import 'package:api_weather_app/home/cubit/home_page_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,7 +18,31 @@ class SearchWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            TextFieldSearchCity(),
+            TextField(
+              controller: _controller,
+              decoration: InputDecoration(
+                hintText: 'City',
+                label: const Text(
+                  'Enter the city ',
+                  style: TextStyle(
+                    fontSize: 22,
+                    color: Color.fromARGB(255, 184, 181, 181),
+                  ),
+                ),
+                prefixIcon: const Icon(Icons.search),
+                hintStyle: const TextStyle(
+                  color: Color.fromARGB(255, 184, 181, 181),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(width: 5, color: Colors.grey),
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(width: 5, color: Colors.grey),
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+              ),
+            ),
             const SizedBox(
               height: 20,
             ),

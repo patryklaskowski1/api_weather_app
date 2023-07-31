@@ -1,4 +1,3 @@
-
 import 'package:api_weather_app/domain/models/weather_model.dart';
 import 'package:api_weather_app/home/cubit/home_page_cubit.dart';
 import 'package:flutter/material.dart';
